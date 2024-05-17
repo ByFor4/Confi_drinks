@@ -7,9 +7,18 @@ def main(request):
     return render(request,'main/main2.html')
 
 def reg(request):
+    error = ""
+    if request.method == "POST":
+        form = userForms(request.POST)
+        if form.is_valid():
+            form.save()
+        else:
+            error = "некоректный имя пользователя или пороль"
+
     form = userForms()
     data = {
-        "form": form
+        "form": form,
+        "error": error
     }
     return render(request,'main/registration.html', data)
 

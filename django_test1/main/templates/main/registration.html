@@ -36,6 +36,7 @@
                                 {{ form.password }}
                                 <label for="" class="register__button-label">Пароль</label>
                             </div>
+                            <span>{{ error }}</span>
                             <a href="#">Забыл пароль?</a>
                             <a href="{% url 'log' %}" id="reg_str">Войти</a>
                             <input type="submit" name="sabmit" class="main__register-submitBtn" value="Погнали">
