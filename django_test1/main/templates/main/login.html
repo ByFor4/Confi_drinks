@@ -26,20 +26,18 @@
                     </a>
                     <div class="main__register-blocks">
                         <form action="" class="main__register-buttons">
-                            {% csrf_token %}
-                            {{ reg }}
-                            <label for="" class="register__label">Регистрация</label>
+                            <label for="" class="register__label">Вход</label>
                             <div class="main__register-button">
-                                <input type="text" name="name" class="register__button-input"  placeholder="a" required />
+                                <input type="text" class="register__button-input" placeholder="a">
                                 <label for="" class="register__button-label">Логин</label>
                             </div>
                             <div class="main__register-button">
-                                <input type="text" name="password" class="register__button-input" placeholder="a" required />
+                                <input type="text" class="register__button-input" placeholder="a">
                                 <label for="" class="register__button-label">Пароль</label>
                             </div>
                             <a href="#">Забыл пароль?</a>
-                            <a href="{% url 'log' %}" id="reg_str">Войти</a>
-                            <input type="submit" name="sabmit" class="main__register-submitBtn" value="Погнали">
+                            <a href="{% url 'reg' %}" id="reg_str">Зарегистрироваться</a>
+                            <input type="submit" class="main__register-submitBtn" value="Погнали">
                         </form>
                     </div>
                 </div>

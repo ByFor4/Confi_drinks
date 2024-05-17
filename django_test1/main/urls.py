@@ -3,6 +3,9 @@ from . import views
 
 urlpatterns = [
     path('',views.main, name = "home"),
-    path('about',views.about, name = "about"),
-    path("reg",views.reg, name = "reg")
+    path("reg",views.reg, name = "reg"),
+    path("cm",views.cm, name = "cm"),
+    path("search_of_ingrid",views.search_of_ingrid, name = "search_of_ingrid"),
+    path("prof",views.prof, name = "prof"),
+    path("log",views.log, name = "log")
 ]

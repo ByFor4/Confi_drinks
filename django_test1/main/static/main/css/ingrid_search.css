@@ -17,4 +17,8 @@ html, body {
     background-color: #F1CF8E;
 }
 
+.profile {
+    max-width: 110px;
+}
+
 /* -------------------------------------------- */

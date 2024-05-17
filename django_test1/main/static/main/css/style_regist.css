@@ -23,6 +23,11 @@ html, body {
 }
 
 /* ------------------------------------- */
+.register__label{
+    margin-left: 60px;
+    font-size: 25px;
+}
+
 .main__register-logo {
     display: block;
 }
@@ -97,7 +102,7 @@ html, body {
     position: relative;
     height: 45px;
     width: 90%;
-    margin-bottom: 17px;
+    margin: 25px 0;
 }
 
 .main__register-submitBtn {

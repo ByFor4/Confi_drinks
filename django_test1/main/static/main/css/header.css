@@ -2,6 +2,12 @@
     margin-top: 40px;
 }
 
+.profile {
+    max-width: 110px;
+    border: 3px solid #ffffffb6;
+    border-radius: 50%;
+}
+
 .header__top-list {
     display: flex;
     justify-content: space-between;
@@ -50,4 +56,45 @@
 .header__nav-link {
     line-height: 39px;
     white-space: nowrap;
+}
+
+.header__user-profile {
+    position: relative;
+    display: inline-block;
+}
+
+.user__profile-list {
+    display: none;
+    position: absolute;
+    background-color: #fbebc4;
+    width: 180px;
+    font-size: 20px;
+    right: 1%;
+    border-radius: 10%;
+    border: 3px solid #E4B04B;
+    z-index: 1;
+    box-shadow: 5px 6px 9px #E4B04B;
+}
+
+.header__user-profile:hover .user__profile-list {
+    display: block;
+}
+
+.profile__blocks {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #e4b14b5b;
+    box-shadow: 0 5px 1px #654f225b;
+}
+.profile__blocks:last-child{
+    margin-bottom: 15px;
+}
+
+
+
+#line__horizont-up {
+    border: 3px solid #E4B04B;
+    box-shadow: 0 4px 4px #00000070;
+    margin-left: -15px;
+    width: 1580px;
 }
