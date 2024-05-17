@@ -1,16 +1,19 @@
-from models import user
+from .models import user
 from django.forms import ModelForm, TextInput
 
-class regestration(ModelForm):
+class userForms(ModelForm):
     class Meta:
         model = user
-        fields = ['name','password']
+        fields = ["name","password"]
 
         widgets = {
-            'name': TextInput(attrs={
-                #Сюда атрибуты из фронта вставлять чтобы во фронте норм выглядело(для имени)
+            "name": TextInput(attrs={
+                "class": "register__button-input",
+                "placeholder": "a"
+                }),
+            "password": TextInput(attrs={
+                "class": "register__button-input",
+                "placeholder": "a"
             }),
-            'password':TextInput(attrs={
-                #Сюда для пороля
-            })
-        }
+            }
+

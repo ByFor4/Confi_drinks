@@ -1,19 +1,17 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from forms import regestration
+from .forms import userForms
+
+
 def main(request):
     return render(request,'main/main2.html')
 
 def reg(request):
-    if request.method == "метод":
-        reg = regestration(request.method)
-        if reg.na:
-            reg.save()
-
-    reg = regestration
-
-    data = {'reg': reg}
-    return render(request,'main/registration.html',data)
+    form = userForms()
+    data = {
+        "form": form
+    }
+    return render(request,'main/registration.html', data)
 
 def cm(request):
     return render(request,'main/coctails_make.html')
