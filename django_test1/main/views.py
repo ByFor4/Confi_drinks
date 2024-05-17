@@ -8,7 +8,7 @@ def main(request):
 def reg(request):
     if request.method == "метод":
         reg = regestration(request.method)
-        if reg != user.objects.filter(name = 'name'):
+        if reg != user.:
             reg.save()
         else:
             error ="Такое имя пользователя уже занято"
