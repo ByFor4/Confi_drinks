@@ -1,9 +1,18 @@
-html, body {
-    font-family: 'Montserrat Alternates';
-    font-weight: 400;
-    background-color: #F9BF4E;
+:root {
+    --background-color: #F9BF4E;
+    --text-color: #000000;
+    --accent-color: #007bff;
+    
 }
 
+body {
+    font-family: 'Montserrat Alternates';
+    font-weight: 400;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    transition: all 1.5s;
+
+}
 .wrapper {
     min-height: 100%;
     width: 100%;
@@ -12,7 +21,7 @@ html, body {
 
 .container {
     max-width: 1580px;
-    padding: 0 15px;
+    padding: 0 20px;
     margin: 0 auto;
     background-color: #F1CF8E;
 }
@@ -25,16 +34,44 @@ html, body {
     max-width: 110px;
 }
 
-/* -----HEDER--------------------------------------------- */
+body.dark-theme {
+    .container {
+        background-color: #2a2110;
+    }
 
-.main__article {}
+    .header__nav-item {
+        background-color: #222222af;
+    }
+
+    .user__profile-list {
+        background-color: #453517;
+    }
+    ::placeholder{
+        color: #cfd6ded2;
+    }
+    .save__button:hover{
+        box-shadow: 0 0 30px 3px #ffffff;
+    }
+    .night_theme:focus{
+        box-shadow: 2px 2px 20px 5px #ffffff;
+    }
+    .logo{
+        background-color: rgba(255, 255, 255, 0.542);
+        border-radius: 20px;
+        box-shadow: 0 0 20px 9px #ffffff;
+    }
+    --background-color: #161108;
+    --text-color: #ffffffed;
+}
+
+/* -----HEDER--------------------------------------------- */
 
 .main__create-items {
     display: grid;
     grid-template:
-        "title title"1fr "desc desc"5fr "file file"2fr
+        "title file"1fr "desc search"2fr "0 save".4fr
         /* дали размер строк*/
-        / 2fr 300px;
+        / 1fr 800px;
     /* дали размер колонок*/
     /* justify-content: space-between; */
     justify-items: center;
@@ -45,27 +82,31 @@ html, body {
 .main__create-title {
     padding: 10px 34%;
     font-size: 39px;
-
 }
 
 .create__input--title {
     grid-area: title;
     justify-self: start;
-    margin: 40px 0 0 100px;
+    align-self: center;
+    margin: 40px 0 0 150px;
 }
-.title__name{
+
+.title__name {
     position: relative;
     font-size: 30px;
     margin-bottom: 6px;
-    left: 10px;
+    left: 20px;
+    max-width: 500px
 }
+
 .input__title {
     font-size: 30px;
     width: 500px;
     height: 50px;
     border-radius: 6%;
     padding-left: 12px;
-    
+    background-color: #d0a54d9b;
+    color: #b6bbc2;
 }
 
 .create__input--desc {
@@ -75,16 +116,87 @@ html, body {
     align-self: start;
 }
 
+.desk__name {
+    position: relative;
+    font-size: 30px;
+    margin-bottom: 6px;
+    left: 49px;
+    max-width: 500px;
+    text-align: center;
+}
+
 .input__desc {
-    font-size: 40px;
+    font-size: 26px;
+    height: 500px;
+    width: 600px;
+    border-radius: 8%;
+    padding: 0 0 400px 13px;
+    background-color: #d0a54d9b;
 }
 
 .create__input--file {
     grid-area: file;
+    justify-self: center;
+    align-self: center;
 }
 
 .input__file {
     font-size: 40px;
+    margin-top: 20px;
+    /* margin-left: 200px; */
 }
 
-.create__input {}
+.create__input--search {
+    grid-area: search;
+    justify-self: center;
+    margin-top: 40px;
+    align-self: start;
+}
+
+.search__name {
+    /* position: relative;
+    left: 65px; */
+    font-size: 30px;
+    margin-bottom: 6px;
+    max-width: 500px;
+    text-align: center;
+}
+
+.input__search {
+    font-size: 20px;
+    height: 40px;
+    width: 500px;
+    border-radius: 3%;
+    padding-left: 14px;
+    background-color: #d0a54d9b;
+
+}
+
+.block-of-ingrid__search {
+    margin-top: 15px;
+    background-color: #cbc2af5a;
+    width: 500px;
+    height: 446px;
+    border-radius: 8%;
+}
+
+.create__input--save {
+    grid-area: save;
+    justify-self: end;
+    align-self: start;
+
+}
+
+.save__button {
+    font-size: 40px;
+    border-radius: 30px;
+    margin-right: 180px;
+    padding: 10px;
+    background-color: rgba(124, 233, 124, 0.548);
+    transition: all .4s;
+}
+
+.save__button:hover {
+    transform: scale(1.05);
+    background-color: rgba(124, 233, 124, 0.825);
+}
