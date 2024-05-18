@@ -20,11 +20,9 @@ body {
 
 .container {
   max-width: 1580px;
-  padding: 0 15px;
+  padding: 0 20px;
   margin: 0 auto;
   background-color: #F1CF8E;
-  border-top-left-radius: 3%;
-  border-top-right-radius: 3%;
 }
 
 #cont_foot {
@@ -33,7 +31,7 @@ body {
 
 body.dark-theme {
   .container {
-    background-color: #3b2e16;
+    background-color: #2a2110;
   }
   
   .main__list-blocks {
@@ -50,12 +48,15 @@ body.dark-theme {
 
   .user__profile-list {
     background-color: #3b2e16;
-
+  }
+  .logo{
+    background-color: rgba(255, 255, 255, 0.542);
+    border-radius: 20px;
+    box-shadow: 0 0 20px 9px #ffffff;
   }
 
-  --background-color: #222222;
+  --background-color: #161108;
   --text-color: #ffffffed;
-  --accent-color: #00a7ff;
 }
 
 /* ---MAIN---------------------------------------------------------- */
@@ -69,7 +70,7 @@ body.dark-theme {
   border: 3px solid #E4B04B;
   box-shadow: 0 4px 4px #00000070;
   margin-left: -15px;
-  width: 1580px;
+  width: 1575px;
 }
 
 .main__search {
