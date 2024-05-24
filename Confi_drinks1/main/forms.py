@@ -8,10 +8,12 @@ class create_Coctail(ModelForm):
 
         widgets = {
             "name": TextInput(attrs={
-                #Сюда фронт
+                "class": "input__title night_theme",
+                "placeholder": "Имя"
             }),
             "description": TextInput(attrs={
-                # Сюда фронт
+                "class": "input__desc night_theme",
+                "placeholder": "Описание"
             }),
             "picture": TextInput(attrs={
                 # Сюда фронт
