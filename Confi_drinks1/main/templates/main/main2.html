@@ -38,15 +38,10 @@
           </div>
           <div class="header__user-nav">
             <div class="header__user-profile">
-              <a href="{% url 'reg' %}">
+              <a>
                 <img src="{% static 'main/files/profile.svg' %}" alt="profile" class="profile">
               </a>
               <div class="user__profile-list">
-                <a href="{% url 'reg' %}" class="profile__blocks-link">
-                  <div class="profile__blocks">
-                    Вход/Регистрация
-                  </div>
-                </a>
                 <a href="{% url 'prof' %}" class="profile__blocks-link">
                   <div class="profile__blocks">
                     Мой профиль
@@ -88,10 +83,7 @@
           </aside>
           <article class="main__article">
             <div class="main__list">
-              <a class="main__list-blocks" href="#">
-
-                123123
-
+              <a class="main__list-blocks" href="{% url 'coctail_info' %}">
                 <div class="main__list-coctails">
                   <h1>Название</h1>
                   <h2>Описание</h2>
