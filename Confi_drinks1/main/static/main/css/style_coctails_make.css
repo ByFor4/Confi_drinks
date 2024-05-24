@@ -1,0 +1,189 @@
+:root {
+    /* --save-button: ; */
+}
+
+:root[black-on='dark'] {
+    --input-text: #cfd6ded2;
+    --dark-focus: 2px 2px 20px 5px #ffffff;
+    --save-button-hover:  0 0 30px 3px #ffffff;
+    --save-button: rgba(118, 255, 118, 0.743);
+}
+
+
+body {
+    font-family: 'Montserrat Alternates';
+    font-weight: 400;
+    background-color: var(--bg-body);
+    color: var(--text-color);
+    transition: var(--trans-bg);
+}
+
+.wrapper {
+    min-height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.container {
+    max-width: 1580px;
+    padding: 0 20px;
+    margin: 0 auto;
+    background-color: var(--bg-cont);
+    transition: var(--trans-bg);
+    transition: 0;
+}
+
+#cont_foot {
+    padding: 0;
+}
+
+.profile {
+    max-width: 110px;
+}
+
+/* -----HEDER--------------------------------------------- */
+
+.main__create-items {
+    display: grid;
+    grid-template:
+        "title file"1fr "desc search"2fr "0 save".4fr
+        /* дали размер строк*/
+        / 1fr 800px;
+    /* дали размер колонок*/
+    /* justify-content: space-between; */
+    justify-items: center;
+    /*прижались к правому боку*/
+    align-items: center;
+}
+
+.main__create-title {
+    padding: 10px 34%;
+    font-size: 39px;
+}
+
+::placeholder {
+    color: var(--input-text);
+}
+.create__input--title {
+    grid-area: title;
+    justify-self: start;
+    align-self: center;
+    margin: 40px 0 0 150px;
+}
+
+.title__name {
+    position: relative;
+    font-size: 30px;
+    margin-bottom: 6px;
+    left: 20px;
+    max-width: 500px
+}
+
+.input__title {
+    font-size: 30px;
+    width: 500px;
+    height: 50px;
+    border-radius: 6%;
+    padding-left: 12px;
+    background-color: #d0a54d9b;
+}
+
+.create__input--desc {
+    grid-area: desc;
+    justify-self: start;
+    margin: 40px 0 0 100px;
+    align-self: start;
+}
+
+.desk__name {
+    position: relative;
+    font-size: 30px;
+    margin-bottom: 6px;
+    left: 49px;
+    max-width: 500px;
+    text-align: center;
+}
+
+.input__desc {
+    font-size: 26px;
+    height: 500px;
+    width: 600px;
+    border-radius: 8%;
+    padding: 0 0 400px 13px;
+    background-color: #d0a54d9b;
+}
+
+.create__input--file {
+    grid-area: file;
+    justify-self: center;
+    align-self: center;
+}
+
+.input__file {
+    font-size: 40px;
+    margin-top: 20px;
+    /* margin-left: 200px; */
+}
+
+.create__input--search {
+    grid-area: search;
+    justify-self: center;
+    margin-top: 40px;
+    align-self: start;
+}
+
+.search__name {
+    /* position: relative;
+    left: 65px; */
+    font-size: 30px;
+    margin-bottom: 6px;
+    max-width: 500px;
+    text-align: center;
+}
+
+.input__search {
+    font-size: 20px;
+    height: 40px;
+    width: 500px;
+    border-radius: 3%;
+    padding-left: 14px;
+    background-color: #d0a54d9b;
+
+}
+
+.block-of-ingrid__search {
+    margin-top: 15px;
+    background-color: #cbc2af5a;
+    width: 500px;
+    height: 446px;
+    border-radius: 8%;
+}
+
+.create__input--save {
+    grid-area: save;
+    justify-self: end;
+    align-self: start;
+
+}
+
+.save__button {
+    font-size: 40px;
+    border-radius: 30px;
+    margin-right: 180px;
+    padding: 10px;
+    background-color: rgba(124, 233, 124, 0.548);
+    transition: all .4s;
+}
+
+.save__button:hover {
+    transform: scale(1.05);
+    background-color: rgba(124, 233, 124, 0.825);
+    box-shadow: var(--save-button-hover);
+}
+.save__button:focus{
+    background-color:var(--save-button) ;
+}
+
+.night_theme:focus {
+    box-shadow: var(--dark-focus);
+}

@@ -1,0 +1,154 @@
+:root {
+    --bg-body: #F9BF4E;
+    --text-color: #000000;
+    --bg-cont: #F1CF8E;
+    --color-blocks: #fff;
+    --color-head-items: #fff;
+    --color-search: #EAC377;
+    --profile-list: #fbebc4;
+    --blocks-color: #fff;
+}
+
+:root[black-on='dark'] {
+    --bg-body: #161108;
+    --text-color: #ffffffed;
+    --bg-cont: #2a2110;
+    --color-blocks: #222222af;
+    --color-head-items: #222222af;
+    --color-search: #222222af;
+    --profile-list: #3b2e16;
+    --blocks-color: #332a2a;
+}
+
+body {
+    font-family: 'Montserrat Alternates';
+    font-weight: 400;
+    background-color: var(--bg-body);
+    color: var(--text-color);
+}
+
+.wrapper {
+    min-height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.container {
+    max-width: 1580px;
+    padding: 0 15px;
+    margin: 0 auto;
+    background-color: var(--bg-cont);
+}
+
+#cont_foot {
+    padding: 0;
+}
+
+/* ----------------------------------------- */
+
+
+#line__horizont-up {
+    margin-bottom: 40px;
+}
+
+.main__block-items {}
+
+.coctail_info {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    height: 1000px;
+    max-height: 1000px;
+    /* margin: 0 100px; */
+    align-content: space-around;
+    gap: 20px;
+}
+
+.coctail_info-file {
+    /* margin-bottom: 20px; */
+}
+
+.info_file-image {
+    /* display: block; */
+    width: 500px;
+}
+
+
+
+.coctail_info-desk {
+    width: 500px;
+    max-width: 1000px;
+    height: 450px;
+    background-color: var(--blocks-color);
+    margin-bottom: 20px;
+    border-radius: 20px;
+    text-align: left;
+    padding: 20px;
+    text-justify: inter-word;
+}
+
+p{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 23px;
+    font-style: italic;
+    text-shadow: 1px 1px 1px rgb(0, 0, 0)
+}
+
+.coctail_info-name {
+    width: 400px;
+    height: 50px;
+    background-color: var(--blocks-color);
+    border-radius: 13px;
+    text-align: center;
+}
+
+.info-name{
+}
+
+
+
+.coctail_info-ing {
+    max-width: 500px;
+    width: 400px;
+    height: 300px;
+    max-height: 300px;
+    background-color: #ffffffcb;
+    border-radius: 13px;
+    font-size: 20px;
+}
+
+.list-info-ing{
+    padding: 17px;
+    color: #332a2a;
+}
+
+.top-info-ing{
+    width: 400px;
+    height: 50px;
+    background-color: #dfa12d;
+    margin-bottom: 7px;
+    color: #000000;
+    text-align: center;
+    font-size: 30px;
+    padding-top: 10px;
+    background-image: url(../files/write_pen.svg);
+}
+
+/* ------FOOTER------------------- */
+
+.footer_main {
+    height: 100px;
+    background-color: #7e632b;
+}
+
+@media screen and (max-width:500px) {
+    .wrapper {
+        overflow: auto;
+    }
+
+    .main__search-block {
+        position: relative;
+    }
+}
