@@ -15,12 +15,15 @@
   <title>ConfiDrinks - сделай сам и насладись!</title>
 </head>
 
-<body>
+<body id="black-turn1">
   <div class="wrapper">
+    <div>
+      <img id="black_curtain" src="{% static 'main/files/black_curtain.png' %}" alt="">
+    </div>
     <header class="header">
-      <div class="container">
+      <div class="container" id="black-turn2">
         <div class="header__top-list">
-          <a class="header__logo logo" href="#">
+          <a class="header__logo logo" href="{% url 'home' %}">
             <img src="{% static 'main/files/logo.svg' %}" alt="logo">
           </a>
           <div class="header__nav">
@@ -39,6 +42,11 @@
                 <img src="{% static 'main/files/profile.svg' %}" alt="profile" class="profile">
               </a>
               <div class="user__profile-list">
+                <a href="{% url 'reg' %}" class="profile__blocks-link">
+                  <div class="profile__blocks">
+                    Вход/Регистрация
+                  </div>
+                </a>
                 <a href="{% url 'prof' %}" class="profile__blocks-link">
                   <div class="profile__blocks">
                     Мой профиль
@@ -50,7 +58,7 @@
                   </div>
                 </a>
                 <a href="#" class="profile__blocks-link" id="turn-to-black" >
-                  <div class="profile__blocks" id="black__turn" >
+                  <div class="profile__blocks black-turn" id="black__turn"  onclick="nightTheme()">
                     Темная тема
                   </div>
                 </a>
@@ -62,7 +70,7 @@
       </div>
     </header>
     <main class="main">
-      <div class="container">
+      <div class="container" id="black-turn3">
         <div id="line__horizont-up">
         </div>
         <div class="main__block">
@@ -72,7 +80,7 @@
             <div class="main__search-block">
               <div class="main_search-search">
                 <label>Какой коктейль ищешь? :</label>
-                <input type="text" id="search">
+                <input type="text" autocomplete="off" id="search">
               </div>
               
               <ul class="search-results"></ul>
@@ -81,14 +89,13 @@
           <article class="main__article">
             <div class="main__list">
               <a class="main__list-blocks" href="#">
+
+                123123
+
                 <div class="main__list-coctails">
                   <h1>Название</h1>
                   <h2>Описание</h2>
                   <h3>Список ингридиентов</h3>
-                  <div class="list__likes">
-                    <button class="list__likes-button">👍</button>
-                    <span class="list__likes-count">0</span>
-                  </div>
                   <div class="list__note">
                     <label class="ui-bookmark">
                       <input type="checkbox">
@@ -172,8 +179,6 @@
     </footer>
   </div>
 </body>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-<script src="{% static 'main/js/coctails_like.js' %}"></script>
 <script src="{% static 'main/js/turn_to_black.js' %}"></script>
 
 </html>

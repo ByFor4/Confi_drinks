@@ -1,3 +1,79 @@
+:root {
+    --bg-body: #F9BF4E;
+    --text-color: #000000;
+    --bg-cont: #F1CF8E;
+    --color-head-items: #fff;
+    --trans-bg: background-color .5s ease-in-out 1s;
+    --profile-list: #fbebc4;
+    --anim-black-height: 0px;
+    --blocks-color-profile: #f9d999e7;
+    --footer-colour: #7e632b;
+}
+
+:root[black-on='dark'] {
+    --trans-bg: 0;
+    --bg-body: #161108;
+    --text-color: #ffffffed;
+    --bg-cont: #2a2110;
+    --text-color-profile: #f9ecdeed;
+    --blocks-color-profile: #695b40e7;
+    --color-head-items: #222222af;
+    --profile-list: #3b2e16;
+    --footer-colour: #20190a;
+
+    .logo {
+        background-color: rgba(255, 255, 255, 0.542);
+        border-radius: 20px;
+        box-shadow: 0 0 20px 9px #ffffff;
+    }
+}
+
+body {
+    overflow-x: hidden;
+}
+
+
+@media screen and (max-width:1000px) {
+    .container {
+        max-width: 1000px;
+    }
+
+    .wrapper {
+        overflow: auto;
+    }
+
+    .main__search-block {
+        position: relative;
+    }
+
+}
+
+@media screen and (max-width:500px) {
+    .container {
+        max-width: 500px;
+        
+    }
+
+    .wrapper {
+        overflow: auto;
+    }
+
+    .main__search {
+        display: none;
+    }
+
+    .main__search-block {
+        position: relative;
+    }
+
+    .user__profile-list{
+        left: 20%;
+    }
+
+}
+
+/* --------------------------------------------------- */
+
 .header {
     margin-top: 40px;
 }
@@ -13,6 +89,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 20px 0;
+    flex-wrap: wrap;
 }
 
 .header__logo {
@@ -29,21 +106,18 @@
 
 }
 
-#div1 {
-    display: none;
+#black_curtain {
     position: absolute;
-    left: 30%;
-    width: 700px;
-    height: 685px;
-    background-color: #EAC377;
-    border-radius: 20px;
-    z-index: 9;
+    width: 100%;
+    height: var(--anim-black-height);
+    z-index: 10;
+    transition: all 1.5s;
 }
 
 .header__nav-item {
     margin-right: 90px;
     height: 50px;
-    background-color: white;
+    background-color: var(--color-head-items);
     border: 1px solid #E4B04B;
     border-radius: 10px;
     box-shadow: 0 8px 4px #E4B04B;
@@ -66,7 +140,7 @@
 .user__profile-list {
     display: none;
     position: absolute;
-    background-color: #fbebc4;
+    background-color: var(--profile-list);
     width: 180px;
     font-size: 20px;
     right: 1%;
@@ -83,13 +157,14 @@
 .profile__blocks {
     margin-top: 10px;
     padding: 10px;
-    background-color: #e4b14b5b;
+    background-color: var(--blocks-color-profile);
     box-shadow: 0 5px 1px #654f225b;
-}
-.profile__blocks:last-child{
-    margin-bottom: 15px;
+    color: var(--text-color-profile);
 }
 
+.profile__blocks:last-child {
+    margin-bottom: 15px;
+}
 
 
 #line__horizont-up {
