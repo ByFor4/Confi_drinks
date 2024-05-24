@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from .forms import create_Coctail
+from .models import ingredients
 
 
 
@@ -8,6 +9,8 @@ def main(request):
     return render(request,'main/main2.html')
 
 def cm(request):
+    ings = ingredients.objects.order_by("name")
+
     if request.method == "POST":
         create = create_Coctail(request.POST)
         if create.is_valid():
@@ -17,7 +20,7 @@ def cm(request):
     data = {
         "create": create
     }
-    return render(request,'main/coctails_make.html', data)
+    return render(request,'main/coctails_make.html', data,{'ings': ings})
 
 def search_of_ingrid(request):
     return render(request, "main/search_of_ingrid.html")
