@@ -1,19 +1,21 @@
-from .models import user
 from django.forms import ModelForm, TextInput
+from .models import cocteil
 
-class userForms(ModelForm):
+class create_Coctail(ModelForm):
     class Meta:
-        model = user
-        fields = ["name","password"]
+        model = cocteil
+        fields = ['name','description','picture']
 
         widgets = {
             "name": TextInput(attrs={
-                "class": "register__button-input",
-                "placeholder": "a"
-                }),
-            "password": TextInput(attrs={
-                "class": "register__button-input",
-                "placeholder": "a"
+                #Сюда фронт
             }),
-            }
+            "description": TextInput(attrs={
+                # Сюда фронт
+            }),
+            "picture": TextInput(attrs={
+                # Сюда фронт
+            })
+        }
+
 

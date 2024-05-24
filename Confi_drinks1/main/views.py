@@ -1,13 +1,18 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from .forms import userForms
+from .forms import create_Coctail
+
 
 
 def main(request):
     return render(request,'main/main2.html')
 
 def cm(request):
-    return render(request,'main/coctails_make.html')
+    create = create_Coctail
+    data = {
+        "create": create
+    }
+    return render(request,'main/coctails_make.html', data)
 
 def search_of_ingrid(request):
     return render(request, "main/search_of_ingrid.html")
