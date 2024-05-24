@@ -8,6 +8,11 @@ def main(request):
     return render(request,'main/main2.html')
 
 def cm(request):
+    if request.method == "POST":
+        create = create_Coctail(request.POST)
+        if create.is_valid():
+            create.save()
+            
     create = create_Coctail
     data = {
         "create": create
