@@ -9,10 +9,7 @@ def main(request):
     return render(request,'main/main2.html')
 
 def cm(request):
-    ings = ingredients.objects.order_by("name")
-    ing = {
-        'ings': ings
-    }
+
 
     if request.method == "POST":
         create = create_Coctail(request.POST)
@@ -23,7 +20,7 @@ def cm(request):
     data = {
         "create": create
     }
-    return render(request,'main/coctails_make.html', data, ing)
+    return render(request,'main/coctails_make.html', data)
 
 def search_of_ingrid(request):
     return render(request, "main/search_of_ingrid.html")
